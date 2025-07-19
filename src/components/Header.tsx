@@ -7,7 +7,7 @@ const Header = () => {
       <div className="flex justify-center items-center flex-col p-6">
         <div className="relative w-24 h-24 rounded-full overflow-hidden border-3 border-white">
           <Image
-            src="/teste.jpg"
+            src="/logo-magalu.jpg"
             alt="Logo da Magalu"
             fill
             className="object-cover"
