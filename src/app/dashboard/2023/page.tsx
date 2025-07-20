@@ -1,9 +1,14 @@
+import FinanceStatCards from "@/components/FinanceStatCards";
+
+const data2023 = {
+  lucroLiquido: "-979.104",
+  receitaLiquida: "36.768.149",
+  ativoTotal: "37.455.067",
+  patrimonioLiquido: "9.610.534",
+};
+
 const page = () => {
-  return (
-    <div>
-      <h1>ano de 2023</h1>
-    </div>
-  );
+  return <FinanceStatCards data={data2023} />;
 };
 
 export default page;

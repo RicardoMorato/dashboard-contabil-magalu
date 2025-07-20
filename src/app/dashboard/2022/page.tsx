@@ -1,8 +1,15 @@
+import FinanceStatCards from "@/components/FinanceStatCards";
+
+  const data2022 = {
+    lucroLiquido: "-498.975",
+    receitaLiquida: "37.299.002",
+    ativoTotal: "37.765.845",
+    patrimonioLiquido: "10.648.701"
+  };
+
 const page = () => {
   return (
-    <div>
-      <h1>ano de 2022</h1>
-    </div>
+    <FinanceStatCards data={data2022}/>
   );
 };
 
