@@ -1,11 +1,35 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
+import { Home, FileText, Info, Menu } from "lucide-react";
+import { useState } from "react";
 
 const Header = () => {
+  const [isCollapsed, setIsCollapsed] = useState(false);
+
   return (
-    <aside className="h-screen w-64 bg-blue-700 text-white flex flex-col">
-      <div className="flex justify-center items-center flex-col p-6">
-        <div className="relative w-24 h-24 rounded-full overflow-hidden border-3 border-white">
+    <aside
+      className={`h-screen bg-blue-700 text-white flex flex-col transition-all duration-300
+        ${isCollapsed ? "w-20 items-center" : "w-64"}`}
+    >
+      <div className="flex justify-end w-full p-4">
+        <button
+          onClick={() => setIsCollapsed(!isCollapsed)}
+          className="cursor-pointer"
+        >
+          <Menu size={24} />
+        </button>
+      </div>
+
+      <div
+        className={`flex flex-col items-center p-4 transition-all duration-300 
+          ${isCollapsed ? "gap-1" : "gap-2"}`}
+      >
+        <div
+          className={`relative rounded-full overflow-hidden border-3 border-white
+            ${isCollapsed ? "w-16 h-16" : "w-24 h-24"}`}
+        >
           <Image
             src="/logo-magalu.jpg"
             alt="Logo da Magalu"
@@ -13,18 +37,20 @@ const Header = () => {
             className="object-cover"
           />
         </div>
-        <span className="mt-2 font-semibold text-lg">Magalu Dashboard</span>
+        {!isCollapsed && (
+          <span className="mt-2 font-semibold text-lg">Magalu Dashboard</span>
+        )}
       </div>
 
-      <nav className="flex-1">
-        <ul className="flex flex-col space-y-2 p-4">
+      <nav className="flex-1 w-full">
+        <ul className="flex flex-col space-y-2 p-2">
           <li>
             <Link
               href="/"
               className="flex items-center px-4 py-2 gap-2 rounded-md hover:bg-blue-800 transition-colors"
             >
-              <Image src="/home.png" alt="Home" width={24} height={24} />
-              Home
+              <Home size={24} />
+              {!isCollapsed && "Home"}
             </Link>
           </li>
           <li>
@@ -32,8 +58,8 @@ const Header = () => {
               href="/arquivos"
               className="flex items-center px-4 py-2 gap-2 rounded-md hover:bg-blue-800 transition-colors"
             >
-              <Image src="/file.png" alt="Arquivos" width={24} height={24} />
-              Arquivos
+              <FileText size={24} />
+              {!isCollapsed && "Arquivos"}
             </Link>
           </li>
           <li>
@@ -41,13 +67,16 @@ const Header = () => {
               href="/sobre"
               className="flex items-center px-4 py-2 gap-2 rounded-md hover:bg-blue-800 transition-colors"
             >
-              <Image src="/about.png" alt="Sobre" width={24} height={24} />
-              Sobre
+              <Info size={24} />
+              {!isCollapsed && "Sobre"}
             </Link>
           </li>
         </ul>
       </nav>
-      <footer className="p-4 text-xs text-blue-200">© 2025 Magalu</footer>
+
+      {!isCollapsed && (
+        <footer className="p-4 text-xs text-blue-200">© 2025 Magalu</footer>
+      )}
     </aside>
   );
 };
