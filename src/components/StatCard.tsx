@@ -14,7 +14,7 @@ const StatCard = ({ name, icon: Icon, value }: StatCardProps) => {
       </div>
       <div>
         <p className="text-sm text-gray-500">{name}</p>
-        <p className="text-xl font-semibold">{value}</p>
+        <p className="text-x1 font-semibold">{value}</p>
       </div>
     </div>
   );
