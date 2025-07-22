@@ -29,20 +29,22 @@ const FinanceStatCards: React.FC<FinanceStatCardsProps> = ({ data }) => {
     { name: "Margem Líquida", valor: data.margemLiquida },
     { name: "Retorno s/ Ativo", valor: data.retornoSobreAtivo },
   ];
+
+  const lucroLiquidoNumber = Number(
+    data.lucroLiquido.replace(/\./g, "").replace(",", ".").trim()
+  );
+
   return (
     <div className="flex-1 overflow-auto bg-gray-100 min-h-screen relative z-10">
       <main className="max-w-7xl mx-auto py-6 px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4 mb-8">
           <StatCard
-            name={
-              Number(
-                data.lucroLiquido.replace(/\./g, "").replace(",", ".").trim()
-              ) < 0
-                ? "Prejuízo Líquido"
-                : "Lucro Líquido"
-            }
+            name={lucroLiquidoNumber < 0 ? "Prejuízo Líquido" : "Lucro Líquido"}
             icon={DollarSign}
             value={`R$ ${data.lucroLiquido}`}
+            valueClassName={
+              lucroLiquidoNumber < 0 ? "text-red-600" : "text-green-600"
+            }
           />
           <StatCard
             name="Receita Líquida"
