@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { Home, FileText, Info, Menu } from "lucide-react";
+import { Home, FileText, Info, Menu, BarChart, BookOpen } from "lucide-react";
 import { useState } from "react";
 
 const Header = () => {
@@ -10,7 +10,7 @@ const Header = () => {
 
   return (
     <aside
-      className={`h-screen bg-blue-700 text-white flex flex-col transition-all duration-300
+      className={`bg-blue-700 text-white flex flex-col transition-all duration-300
         ${isCollapsed ? "w-20 items-center" : "w-64"}`}
     >
       <div className="flex justify-end w-full p-4">
@@ -50,7 +50,7 @@ const Header = () => {
               className="flex items-center px-4 py-2 gap-2 rounded-md hover:bg-blue-800 transition-colors"
             >
               <Home size={24} />
-              {!isCollapsed && "Home"}
+              {!isCollapsed && "Início"}
             </Link>
           </li>
           <li>
@@ -60,6 +60,24 @@ const Header = () => {
             >
               <FileText size={24} />
               {!isCollapsed && "Arquivos"}
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/analises"
+              className="flex items-center px-4 py-2 gap-2 rounded-md hover:bg-blue-800 transition-colors"
+            >
+              <BarChart size={24} />
+              {!isCollapsed && "Análises"}
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/indicadores"
+              className="flex items-center px-4 py-2 gap-2 rounded-md hover:bg-blue-800 transition-colors"
+            >
+              <BookOpen size={24} />
+              {!isCollapsed && "Indicadores"}
             </Link>
           </li>
           <li>
