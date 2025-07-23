@@ -54,11 +54,19 @@ const FinanceIndicatorsChart: React.FC<FinanceIndicatorsChartProps> = ({
               fontSize: 13,
             }}
           />
-          <Bar dataKey="valor" radius={[6, 6, 0, 0]} barSize={20}>
+          <Bar dataKey="valor" radius={[0, 0, 0, 0]} barSize={20}>
             {data.map((entry, index) => (
               <Cell
                 key={`cell-${index}`}
-                fill={entry.valor >= 0 ? "#16a34a" : "#dc2626"}
+                fill={
+                  entry.valor <= 0 ||
+                  entry.name
+                    .toLowerCase()
+                    .normalize("NFD")
+                    .replace(/[\u0300-\u036f]/g, "") === "endividamento"
+                    ? "#dc2626"
+                    : "#16a34a"
+                }
               />
             ))}
           </Bar>
