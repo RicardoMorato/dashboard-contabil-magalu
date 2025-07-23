@@ -1,6 +1,7 @@
 import FinanceStatCards from "@/components/FinanceStatCards";
 
 const data2022 = {
+  ano: "2022",
   lucroLiquido: "-498.975.000",
   receitaLiquida: "37.299.002.000",
   ativoTotal: "37.765.845.000",
