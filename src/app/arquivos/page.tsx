@@ -5,7 +5,7 @@ const page = () => {
         Baixe os relatórios contábeis da Magazine Luiza
       </h1>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-4xl">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-5xl">
         <div className="bg-white rounded-xl shadow-lg p-6 flex flex-col justify-between">
           <h2 className="text-xl font-semibold mb-4">
             Relatório Contábil 2022 e 2023

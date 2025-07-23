@@ -19,7 +19,7 @@ const page = () => {
         Explicação dos Termos
       </h1>
 
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-3 max-w-6xl w-full">
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-3 max-w-5xl w-full">
         <div className="bg-white rounded-lg shadow p-3 flex flex-col">
           <div className="flex items-center mb-1">
             <DollarSign className="text-blue-700 mr-1" size={24} />
@@ -49,7 +49,7 @@ const page = () => {
           </div>
           <p className="text-gray-700 text-base leading-tight">
             Se a empresa consegue pagar dívidas de curto prazo com ativos
-            circulantes.
+            circulantes. Quanto maior, melhor
           </p>
         </div>
 
@@ -59,7 +59,8 @@ const page = () => {
             <h2 className="text-lg font-semibold">Liquidez Seca</h2>
           </div>
           <p className="text-gray-700 text-base leading-tight">
-            Igual à liquidez corrente, mas desconsidera estoques.
+            Igual à liquidez corrente, mas desconsidera estoques. Quanto maior,
+            melhor
           </p>
         </div>
 
@@ -69,7 +70,8 @@ const page = () => {
             <h2 className="text-lg font-semibold">Endividamento</h2>
           </div>
           <p className="text-gray-700 text-base leading-tight">
-            Quanto a empresa depende de dívidas em relação ao patrimônio.
+            Quanto a empresa depende de dívidas em relação ao patrimônio. Quanto
+            menor, melhor
           </p>
         </div>
 
@@ -79,7 +81,8 @@ const page = () => {
             <h2 className="text-lg font-semibold">Giro do Ativo</h2>
           </div>
           <p className="text-gray-700 text-base leading-tight">
-            Quantas vezes os ativos viram vendas ao ano. Quanto maior, melhor.
+            Mostra que a empresa gera mais receita em relação ao total de ativos
+            que possui. Quanto maior, melhor.
           </p>
         </div>
 
@@ -89,7 +92,8 @@ const page = () => {
             <h2 className="text-lg font-semibold">Retorno sobre Ativo</h2>
           </div>
           <p className="text-gray-700 text-base leading-tight">
-            Quanto de lucro a empresa gera em relação ao total de ativos.
+            Quanto de lucro a empresa gera em relação ao total de ativos. Quanto
+            maior, melhor.
           </p>
         </div>
 

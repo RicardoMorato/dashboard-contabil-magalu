@@ -5,7 +5,7 @@ const page = () => {
         Sobre o Dashboard
       </h1>
 
-      <div className="grid grid-cols-1 gap-6 max-w-4xl w-full">
+      <div className="grid grid-cols-1 gap-6 max-w-5xl w-full">
         <div className="bg-white rounded-xl shadow-lg p-6">
           <h2 className="text-xl font-semibold mb-1">Sobre</h2>
           <p className="text-gray-700 text-lg leading-relaxed text-left">

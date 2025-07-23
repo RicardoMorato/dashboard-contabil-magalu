@@ -7,7 +7,7 @@ const page = () => {
         Acesse o Dashboard
       </h1>
 
-      <div className="max-w-4xl w-full flex justify-around gap-6">
+      <div className="max-w-5xl w-full flex justify-around gap-6">
         <Link
           href="/dashboard/2022"
           className="bg-blue-700 hover:bg-blue-800 text-white font-semibold px-12 py-6 rounded-lg shadow-md transition-colors duration-300 flex-1 text-center"
