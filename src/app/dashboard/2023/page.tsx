@@ -12,6 +12,16 @@ const data2023 = {
   giroDoAtivo: 0.98,
   margemLiquida: -2.7,
   retornoSobreAtivo: -2.6,
+
+  liquidezGeral: 1.01,
+  composicaoDivida: 64.3,
+  participacaoCapitaisTerceiros: 2.3,
+  rspl: -10.2,
+  pmre: 93,
+  pmrv: 62,
+  pmpc: 108,
+  cicloOperacional: 155,
+  cicloFinanceiro: 47,
 };
 
 const page = () => {
