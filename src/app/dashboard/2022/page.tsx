@@ -12,6 +12,16 @@ const data2022 = {
   giroDoAtivo: 0.99,
   margemLiquida: -1.3,
   retornoSobreAtivo: -1.3,
+
+  liquidezGeral: 1.01,
+  composicaoDivida: 64.3,
+  participacaoCapitaisTerceiros: 2.3,
+  rspl: -4.7,
+  pmre: 89,
+  pmrv: 58,
+  pmpc: 92,
+  cicloOperacional: 147,
+  cicloFinanceiro: 55,
 };
 
 const page = () => {
