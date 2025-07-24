@@ -1,6 +1,7 @@
 import StatCard from "@/components/StatCard";
 import { DollarSign, ShoppingBag, Database, Layers } from "lucide-react";
 import FinanceIndicatorsChart from "@/components/FinanceIndicatorsChart";
+import OtherFinanceIndicatorsTable from "./OtherFinanceIndicatorsTable";
 
 type FinanceData = {
   ano: string;
@@ -15,6 +16,15 @@ type FinanceData = {
   giroDoAtivo: number;
   margemLiquida: number;
   retornoSobreAtivo: number;
+
+  liquidezGeral: number;
+  participacaoCapitaisTerceiros: number;
+  rspl: number;
+  pmre: number;
+  pmrv: number;
+  pmpc: number;
+  cicloOperacional: number;
+  cicloFinanceiro: number;
 };
 
 interface FinanceStatCardsProps {
@@ -29,6 +39,20 @@ const FinanceStatCards: React.FC<FinanceStatCardsProps> = ({ data }) => {
     { name: "Giro do Ativo", valor: data.giroDoAtivo },
     { name: "Margem Líquida", valor: data.margemLiquida },
     { name: "Retorno s/ Ativo", valor: data.retornoSobreAtivo },
+  ];
+
+  const othersIndicator = [
+    { name: "Liquidez Geral", valor: data.liquidezGeral },
+    {
+      name: "Participação de Capitais de Terceiros",
+      valor: data.participacaoCapitaisTerceiros,
+    },
+    { name: "Retorno s/ Patrimônio Líquido (RSPL) ", valor: data.rspl },
+    { name: "Prazo Médio Renovação Estoques (PMRE)", valor: data.pmre },
+    { name: "Prazo Médio Recebimento Vendas (PMRV)", valor: data.pmrv },
+    { name: "Prazo Médio Pagamento Contas (PMPC)", valor: data.pmpc },
+    { name: "Ciclo Operacional", valor: data.cicloOperacional },
+    { name: "Ciclo Financeiro", valor: data.cicloFinanceiro },
   ];
 
   const lucroLiquidoNumber = Number(
@@ -68,6 +92,7 @@ const FinanceStatCards: React.FC<FinanceStatCardsProps> = ({ data }) => {
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           <FinanceIndicatorsChart data={indicatorsData} />
+          <OtherFinanceIndicatorsTable data={othersIndicator} />
         </div>
       </main>
     </div>
