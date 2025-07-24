@@ -23,7 +23,7 @@ const FinanceIndicatorsChart: React.FC<FinanceIndicatorsChartProps> = ({
 }) => {
   return (
     <div className="w-full max-w-3xl mx-auto p-2 bg-white rounded-md shadow-md">
-      <h2 className="text-lg font-semibold mb-4 text-gray-700">{title}</h2>
+      <h2 className="text-lg font-semibold mb-4 pl-3 pt-3 pb-2 border-b border-gray-200 text-gray-700">{title}</h2>
       <ResponsiveContainer width="100%" height={300}>
         <BarChart
           data={data}
