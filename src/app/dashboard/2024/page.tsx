@@ -12,6 +12,16 @@ const data2024 = {
   giroDoAtivo: 1.02,
   margemLiquida: 1.2,
   retornoSobreAtivo: 1.2,
+
+  liquidezGeral: 1.01,
+  composicaoDivida: 64.3,
+  participacaoCapitaisTerceiros: 2.3,
+  rspl: 4.0,
+  pmre: 91,
+  pmrv: 56,
+  pmpc: 98,
+  cicloOperacional: 147,
+  cicloFinanceiro: 49,
 };
 
 const page = () => {
