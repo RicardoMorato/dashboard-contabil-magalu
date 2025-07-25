@@ -3,19 +3,20 @@
 import {
   DollarSign,
   Percent,
-  TrendingDown,
   TrendingUp,
   RefreshCcw,
   RotateCcw,
   BarChart3,
   Layers,
   Home,
+  Clock,
+  Repeat,
 } from "lucide-react";
 
 const page = () => {
   return (
-    <div className="min-h-screen bg-gray-100 p-4 flex flex-col items-center">
-      <h1 className="text-2xl font-bold text-blue-800 mb-4 text-center">
+    <div className="min-h-screen bg-gray-100 p-8 flex flex-col items-center">
+      <h1 className="text-3xl font-bold text-blue-800 mb-10 text-center">
         Explicação dos Termos
       </h1>
 
@@ -49,7 +50,7 @@ const page = () => {
           </div>
           <p className="text-gray-700 text-base leading-tight">
             Se a empresa consegue pagar dívidas de curto prazo com ativos
-            circulantes. Quanto maior, melhor
+            circulantes. Quanto maior, melhor.
           </p>
         </div>
 
@@ -60,7 +61,7 @@ const page = () => {
           </div>
           <p className="text-gray-700 text-base leading-tight">
             Igual à liquidez corrente, mas desconsidera estoques. Quanto maior,
-            melhor
+            melhor.
           </p>
         </div>
 
@@ -71,7 +72,7 @@ const page = () => {
           </div>
           <p className="text-gray-700 text-base leading-tight">
             Quanto a empresa depende de dívidas em relação ao patrimônio. Quanto
-            menor, melhor
+            menor, melhor.
           </p>
         </div>
 
@@ -102,7 +103,7 @@ const page = () => {
             <BarChart3 className="text-blue-700 mr-1" size={24} />
             <h2 className="text-lg font-semibold">Receita Líquida</h2>
           </div>
-          <p className="text-gray-700 ttext-base leading-tight">
+          <p className="text-gray-700 text-base leading-tight">
             Total obtido com vendas após deduções de impostos, devoluções e
             descontos.
           </p>
@@ -125,6 +126,27 @@ const page = () => {
           </div>
           <p className="text-gray-700 text-base leading-tight">
             Capital próprio da empresa: ativos menos passivos.
+          </p>
+        </div>
+
+        <div className="bg-white rounded-lg shadow p-3 flex flex-col">
+          <div className="flex items-center mb-1">
+            <Repeat className="text-blue-700 mr-1" size={24} />
+            <h2 className="text-lg font-semibold">Ciclos</h2>
+          </div>
+          <p className="text-gray-700 text-base leading-tight">
+            Tempo que leva para transformar compras em vendas e receber por
+            elas.
+          </p>
+        </div>
+
+        <div className="bg-white rounded-lg shadow p-3 flex flex-col">
+          <div className="flex items-center mb-1">
+            <Clock className="text-blue-700 mr-1" size={24} />
+            <h2 className="text-lg font-semibold">Prazos Médios</h2>
+          </div>
+          <p className="text-gray-700 text-base leading-tight">
+            Tempo médio para pagar, vender ou receber.
           </p>
         </div>
       </div>
