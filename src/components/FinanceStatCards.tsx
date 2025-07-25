@@ -2,6 +2,7 @@ import StatCard from "@/components/StatCard";
 import { DollarSign, ShoppingBag, Database, Layers } from "lucide-react";
 import FinanceIndicatorsChart from "@/components/FinanceIndicatorsChart";
 import OtherFinanceIndicatorsTable from "./OtherFinanceIndicatorsTable";
+import FinanceLineChart from "./FinanceLineChart";
 
 type FinanceData = {
   ano: string;
@@ -60,8 +61,8 @@ const FinanceStatCards: React.FC<FinanceStatCardsProps> = ({ data }) => {
   );
 
   return (
-    <div className="flex-1 overflow-auto bg-gray-100 min-h-screen relative z-10">
-      <main className="max-w-7xl mx-auto py-6 px-6 lg:px-8">
+    <div className="flex-1 bg-gray-100 relative z-10">
+      <main className="max-w-7xl mx-auto p-8">
         <h1 className="text-base font-bold text-blue-700 mb-2 flex items-center gap-2">
           Dashboard {data.ano}
         </h1>
@@ -90,8 +91,11 @@ const FinanceStatCards: React.FC<FinanceStatCardsProps> = ({ data }) => {
             value={`R$ ${data.patrimonioLiquido}`}
           />
         </div>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          <FinanceIndicatorsChart data={indicatorsData} />
+        <div className="flex flex-col gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <FinanceIndicatorsChart data={indicatorsData} />
+            <FinanceLineChart />
+          </div>
           <OtherFinanceIndicatorsTable data={othersIndicator} />
         </div>
       </main>
