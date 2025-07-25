@@ -13,9 +13,9 @@ const data2022 = {
   margemLiquida: -1.3,
   retornoSobreAtivo: -1.3,
 
-  liquidezGeral: 1.01,
+  liquidezGeral: 0.98,
   composicaoDivida: 64.3,
-  participacaoCapitaisTerceiros: 2.3,
+  participacaoCapitaisTerceiros: 2.55,
   rspl: -4.7,
   pmre: 89,
   pmrv: 58,

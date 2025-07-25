@@ -13,9 +13,9 @@ const data2023 = {
   margemLiquida: -2.7,
   retornoSobreAtivo: -2.6,
 
-  liquidezGeral: 1.01,
+  liquidezGeral: 0.98,
   composicaoDivida: 64.3,
-  participacaoCapitaisTerceiros: 2.3,
+  participacaoCapitaisTerceiros: 2.9,
   rspl: -10.2,
   pmre: 93,
   pmrv: 62,
