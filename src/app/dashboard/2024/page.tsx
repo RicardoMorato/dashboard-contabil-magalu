@@ -22,6 +22,8 @@ const data2024 = {
   pmpc: 98,
   cicloOperacional: 147,
   cicloFinanceiro: 49,
+  imPL: 1.57,
+  irnc: 0.86,
 };
 
 const page = () => {

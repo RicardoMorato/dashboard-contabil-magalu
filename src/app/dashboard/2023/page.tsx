@@ -22,6 +22,8 @@ const data2023 = {
   pmpc: 108,
   cicloOperacional: 155,
   cicloFinanceiro: 47,
+  imPL: 1.79,
+  irnc: 0.86,
 };
 
 const page = () => {

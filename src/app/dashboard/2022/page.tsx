@@ -22,6 +22,8 @@ const data2022 = {
   pmpc: 92,
   cicloOperacional: 147,
   cicloFinanceiro: 55,
+  imPL: 1.49,
+  irnc: 0.69,
 };
 
 const page = () => {
