@@ -3,32 +3,31 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Home, FileText, Info, Menu, BarChart, BookOpen } from "lucide-react";
-import { useState } from "react";
+import { useSidebar } from "@/context/SidebarContext";
 
 const Header = () => {
-  const [isCollapsed, setIsCollapsed] = useState(false);
+  const { isCollapsed, toggleCollapse } = useSidebar();
 
   return (
     <aside
-      className={`bg-blue-700 text-white flex flex-col transition-all duration-300
+      className={`bg-blue-700 fixed top-0 left-0 bottom-0 text-white flex flex-col transition-all duration-300
         ${isCollapsed ? "w-20 items-center" : "w-64"}`}
     >
       <div className="flex justify-end w-full p-4">
-        <button
-          onClick={() => setIsCollapsed(!isCollapsed)}
-          className="cursor-pointer"
-        >
+        <button onClick={toggleCollapse} className="cursor-pointer">
           <Menu size={24} />
         </button>
       </div>
 
       <div
-        className={`flex flex-col items-center p-4 transition-all duration-300 
-          ${isCollapsed ? "gap-1" : "gap-2"}`}
+        className={`flex flex-col items-center p-4 transition-all duration-300 ${
+          isCollapsed ? "gap-1" : "gap-2"
+        }`}
       >
         <div
-          className={`relative rounded-full overflow-hidden border-3 border-white
-            ${isCollapsed ? "w-16 h-16" : "w-24 h-24"}`}
+          className={`relative rounded-full overflow-hidden border-3 border-white ${
+            isCollapsed ? "w-16 h-16" : "w-24 h-24"
+          }`}
         >
           <Image
             src="/logo-magalu.jpg"
@@ -49,8 +48,7 @@ const Header = () => {
               href="/"
               className="flex items-center px-4 py-2 gap-2 rounded-md hover:bg-blue-800 transition-colors"
             >
-              <Home size={24} />
-              {!isCollapsed && "Início"}
+              <Home size={24} /> {!isCollapsed && "Início"}
             </Link>
           </li>
           <li>
@@ -58,8 +56,7 @@ const Header = () => {
               href="/arquivos"
               className="flex items-center px-4 py-2 gap-2 rounded-md hover:bg-blue-800 transition-colors"
             >
-              <FileText size={24} />
-              {!isCollapsed && "Arquivos"}
+              <FileText size={24} /> {!isCollapsed && "Arquivos"}
             </Link>
           </li>
           <li>
@@ -67,8 +64,7 @@ const Header = () => {
               href="/analises"
               className="flex items-center px-4 py-2 gap-2 rounded-md hover:bg-blue-800 transition-colors"
             >
-              <BarChart size={24} />
-              {!isCollapsed && "Análises"}
+              <BarChart size={24} /> {!isCollapsed && "Análises"}
             </Link>
           </li>
           <li>
@@ -76,8 +72,7 @@ const Header = () => {
               href="/indicadores"
               className="flex items-center px-4 py-2 gap-2 rounded-md hover:bg-blue-800 transition-colors"
             >
-              <BookOpen size={24} />
-              {!isCollapsed && "Indicadores"}
+              <BookOpen size={24} /> {!isCollapsed && "Indicadores"}
             </Link>
           </li>
           <li>
@@ -85,8 +80,7 @@ const Header = () => {
               href="/sobre"
               className="flex items-center px-4 py-2 gap-2 rounded-md hover:bg-blue-800 transition-colors"
             >
-              <Info size={24} />
-              {!isCollapsed && "Sobre"}
+              <Info size={24} /> {!isCollapsed && "Sobre"}
             </Link>
           </li>
         </ul>
