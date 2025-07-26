@@ -26,6 +26,8 @@ type FinanceData = {
   pmpc: number;
   cicloOperacional: number;
   cicloFinanceiro: number;
+  imPL: number;
+  irnc: number;
 };
 
 interface FinanceStatCardsProps {
@@ -47,6 +49,14 @@ const FinanceStatCards: React.FC<FinanceStatCardsProps> = ({ data }) => {
     {
       name: "Participação de Capitais de Terceiros",
       valor: data.participacaoCapitaisTerceiros,
+    },
+    {
+      name: "Grau de Imobilização do Patrimônio Líquido (ImPL)",
+      valor: data.imPL,
+    },
+    {
+      name: "Grau de Imobilização dos Recursos Não Correntes (IRNC)",
+      valor: data.irnc,
     },
     { name: "Retorno s/ Patrimônio Líquido (RSPL) ", valor: data.rspl },
     { name: "Prazo Médio Renovação Estoques (PMRE)", valor: data.pmre },

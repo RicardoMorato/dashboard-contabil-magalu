@@ -18,7 +18,7 @@ const OtherFinanceIndicatorsTable: React.FC<
 
   return (
     <div className="w-full bg-white rounded-xl shadow-lg p-5">
-      <h2 className="text-base font-semibold text-gray-800 mb-4 border-b border-gray-200 pb-2">
+      <h2 className="text-lg font-semibold mb-4 pl-2 pt-3 pb-2 border-b border-gray-200 text-gray-700">
         {title}
       </h2>
       <div className="space-y-2">
