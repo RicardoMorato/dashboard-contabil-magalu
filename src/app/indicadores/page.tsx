@@ -11,6 +11,11 @@ import {
   Home,
   Clock,
   Repeat,
+  PieChart,
+  Scale,
+  LayoutGrid,
+  Move,
+  ArrowUpRight,
 } from "lucide-react";
 
 const page = () => {
@@ -147,6 +152,69 @@ const page = () => {
           </div>
           <p className="text-gray-700 text-base leading-tight">
             Tempo médio para pagar, vender ou receber.
+          </p>
+        </div>
+
+        <div className="bg-white rounded-lg shadow p-3 flex flex-col">
+          <div className="flex items-center mb-1">
+            <PieChart className="text-blue-700 mr-1" size={24} />
+            <h2 className="text-lg font-semibold">Liquidez Geral</h2>
+          </div>
+          <p className="text-gray-700 text-base leading-tight">
+            Mostra se a empresa consegue pagar todas as dívidas (curto e longo
+            prazo). Quanto maior, melhor.
+          </p>
+        </div>
+
+        <div className="bg-white rounded-lg shadow p-3 flex flex-col">
+          <div className="flex items-center mb-1">
+            <Scale className="text-blue-700 mr-1" size={24} />
+            <h2 className="text-lg font-semibold">
+              Participação de Capitais de Terceiros
+            </h2>
+          </div>
+          <p className="text-gray-700 text-base leading-tight">
+            Mostra quanto do total investido na empresa vem de dívidas em vez de
+            capital próprio.
+          </p>
+        </div>
+
+        <div className="bg-white rounded-lg shadow p-3 flex flex-col">
+          <div className="flex items-center mb-1">
+            <LayoutGrid className="text-blue-700 mr-1" size={24} />
+            <h2 className="text-lg font-semibold">
+              Grau de Imobilização do Patrimônio Líquido (ImPL)
+            </h2>
+          </div>
+          <p className="text-gray-700 text-base leading-tight">
+            Mostra quanto do capital próprio está aplicado em ativos fixos, como
+            imóveis e máquinas. Quanto menor, melhor.
+          </p>
+        </div>
+
+        <div className="bg-white rounded-lg shadow p-3 flex flex-col">
+          <div className="flex items-center mb-1">
+            <LayoutGrid className="text-blue-700 mr-1" size={24} />
+            <h2 className="text-lg font-semibold">
+              Grau de Imobilização dos Recursos Não Correntes (IRNC)
+            </h2>
+          </div>
+          <p className="text-gray-700 text-base leading-tight">
+            Indica quanto do capital de longo prazo está imobilizado em ativos
+            permanentes. Quanto menor, mais flexibilidade financeira.
+          </p>
+        </div>
+
+        <div className="bg-white rounded-lg shadow p-3 flex flex-col">
+          <div className="flex items-center mb-1">
+            <ArrowUpRight className="text-blue-700 mr-1" size={24} />
+            <h2 className="text-lg font-semibold">
+              Retorno sobre Patrimônio Líquido (RSPL)
+            </h2>
+          </div>
+          <p className="text-gray-700 text-base leading-tight">
+            Mostra quanto de lucro líquido a empresa gera em relação ao seu
+            patrimônio líquido total. Quanto maior, melhor.
           </p>
         </div>
       </div>
