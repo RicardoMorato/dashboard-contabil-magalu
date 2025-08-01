@@ -30,7 +30,7 @@ const FinanceLineChart: React.FC<FinanceLineChartProps> = ({
       <h2 className="text-lg font-semibold mb-4 pl-3 pt-3 pb-2 border-b border-gray-200 text-gray-700">
         {title}
       </h2>
-      <ResponsiveContainer width="100%" height={300}>
+      <ResponsiveContainer width="100%" height={350}>
         <LineChart
           data={financeTrendsData}
           margin={{ top: 20, right: 30, left: 20, bottom: 20 }}
