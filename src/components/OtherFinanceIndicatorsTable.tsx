@@ -16,13 +16,20 @@ const OtherFinanceIndicatorsTable: React.FC<
     "Ciclo Financeiro",
   ];
 
+  const anoItem = data.find((item) => item.name.trim().toLowerCase() === "ano");
+  const ano = anoItem ? anoItem.valor : "";
+
+  const dataSemAno = data.filter(
+    (item) => item.name.trim().toLowerCase() !== "ano"
+  );
+
   return (
     <div className="w-full bg-white rounded-xl shadow-lg p-5">
       <h2 className="text-lg font-semibold mb-4 pl-2 pt-3 pb-2 border-b border-gray-200 text-gray-700">
-        {title}
+        {title} {ano && `do ano ${ano}`}
       </h2>
       <div className="space-y-2">
-        {data.map((item, idx) => {
+        {dataSemAno.map((item, idx) => {
           let valorExibido;
 
           if (

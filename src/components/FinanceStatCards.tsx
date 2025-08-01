@@ -64,6 +64,7 @@ const FinanceStatCards: React.FC<FinanceStatCardsProps> = ({ data }) => {
     { name: "Prazo Médio Pagamento Contas (PMPC)", valor: data.pmpc },
     { name: "Ciclo Operacional", valor: data.cicloOperacional },
     { name: "Ciclo Financeiro", valor: data.cicloFinanceiro },
+    { name: "Ano", valor: data.ano },
   ];
 
   const lucroLiquidoNumber = Number(
@@ -103,7 +104,7 @@ const FinanceStatCards: React.FC<FinanceStatCardsProps> = ({ data }) => {
         </div>
         <div className="flex flex-col gap-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <FinanceIndicatorsChart data={indicatorsData} />
+            <FinanceIndicatorsChart />
             <FinanceLineChart />
           </div>
           <OtherFinanceIndicatorsTable data={othersIndicator} />
