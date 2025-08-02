@@ -217,6 +217,80 @@ const page = () => {
             patrimônio líquido total. Quanto maior, melhor.
           </p>
         </div>
+
+        <div className="bg-white rounded-lg shadow p-3 flex flex-col">
+          <div className="flex items-center mb-1">
+            <TrendingUp className="text-blue-700 mr-1" size={24} />
+            <h2 className="text-lg font-semibold">
+              Grau de Alavancagem Financeira (GAF)
+            </h2>
+          </div>
+          <p className="text-gray-700 text-base leading-tight">
+            Mede quanto a empresa amplia seu lucro por meio de dívidas. Maior
+            valor indica maior risco e potencial de retorno.
+          </p>
+        </div>
+
+        <div className="bg-white rounded-lg shadow p-3 flex flex-col">
+          <div className="flex items-center mb-1">
+            <TrendingUp className="text-blue-700 mr-1" size={24} />
+            <h2 className="text-lg font-semibold">
+              Grau de Alavancagem Operacional (GAO)
+            </h2>
+          </div>
+          <p className="text-gray-700 text-base leading-tight">
+            Indica quanto o lucro operacional varia diante de mudanças nas
+            vendas. Mostra a sensibilidade do resultado.
+          </p>
+        </div>
+
+        <div className="bg-white rounded-lg shadow p-3 flex flex-col">
+          <div className="flex items-center mb-1">
+            <TrendingUp className="text-blue-700 mr-1" size={24} />
+            <h2 className="text-lg font-semibold">
+              Grau de Alavancagem Total (GAT)
+            </h2>
+          </div>
+          <p className="text-gray-700 text-base leading-tight">
+            Combina GAF e GAO para medir o impacto total da variação nas vendas
+            sobre o lucro líquido.
+          </p>
+        </div>
+
+        <div className="bg-white rounded-lg shadow p-3 flex flex-col">
+          <div className="flex items-center mb-1">
+            <ArrowUpRight className="text-blue-700 mr-1" size={24} />
+            <h2 className="text-lg font-semibold">Retorno sobre Ativo (ROA)</h2>
+          </div>
+          <p className="text-gray-700 text-base leading-tight">
+            Mede quanto de lucro líquido a empresa gera em relação ao total de
+            ativos. Quanto maior, melhor.
+          </p>
+        </div>
+
+        <div className="bg-white rounded-lg shadow p-3 flex flex-col">
+          <div className="flex items-center mb-1">
+            <ArrowUpRight className="text-blue-700 mr-1" size={24} />
+            <h2 className="text-lg font-semibold">
+              Retorno sobre Patrimônio Líquido (ROE)
+            </h2>
+          </div>
+          <p className="text-gray-700 text-base leading-tight">
+            Mostra quanto os acionistas ganham de retorno sobre o capital
+            investido. Quanto maior, melhor.
+          </p>
+        </div>
+
+        <div className="bg-white rounded-lg shadow p-3 flex flex-col">
+          <div className="flex items-center mb-1">
+            <Clock className="text-blue-700 mr-1" size={24} />
+            <h2 className="text-lg font-semibold">Ciclo Financeiro</h2>
+          </div>
+          <p className="text-gray-700 text-base leading-tight">
+            Período entre pagar fornecedores e receber dos clientes. Quanto
+            menor, melhor para o fluxo de caixa.
+          </p>
+        </div>
       </div>
     </div>
   );
