@@ -8,7 +8,26 @@ Este projeto, desenvolvido para a disciplina de Contabilidade de Custos e Gerenc
 - **TypeScript**: JavaScript com tipagem para evitar erros.  
 - **Tailwind CSS**: Estilos prontos para criar layouts facilmente.  
 - **Lucide React Icons**: Ícones leves para a interface.  
-- **Recharts**: Biblioteca para criar gráficos interativos.
+- **Recharts**: Biblioteca para criar gráficos interativos.  
+- **Python**: Utilizado para extrair os dados contábeis dos relatórios da Magalu.
+
+## 📊 Extração e cálculo dos indicadores
+
+Os dados apresentados neste dashboard foram extraídos diretamente dos relatórios contábeis oficiais da Magazine Luiza dos períodos de **2022**, **2023** e **2024**.
+
+### 🔍 Como foi feito
+
+Desenvolvemos um script em **Python** que utilizou bibliotecas especializadas como `tabula` e `pandas` para automatizar todo o processo de leitura e extração das tabelas contidas nos arquivos PDF dos relatórios contábeis.  
+
+Esse script foi responsável por:
+- Ler os PDFs e identificar automaticamente as tabelas presentes.
+- Extrair os dados brutos dessas tabelas em formato estruturado.
+- Filtrar apenas os indicadores financeiros relevantes para a análise, como: liquidez, rentabilidade, endividamento, prazos médios, ciclos, entre outros.
+- Calcular os indicadores compostos e margens, conforme as fórmulas ensinadas pelo professor na disciplina de **Contabilidade de Custos e Gerencial**.
+
+Após a extração e tratamento, os dados foram organizados em planilhas e transformados em visualizações e análises comparativas no dashboard, facilitando a interpretação e a comunicação dos resultados obtidos.
+
+> 📌 *Essa etapa foi fundamental para garantir que os dados usados estivessem completos, consistentes e prontos para gerar insights relevantes.*
 
 ## Funcionalidades
 
