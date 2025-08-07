@@ -17,6 +17,7 @@ const page = () => {
             href="https://ri.magazineluiza.com.br/Download.aspx?Arquivo=m4+3Hf24hD8w4AZnpHdpHg=="
             download
             className="self-start px-6 py-3 bg-blue-700 text-white rounded-lg hover:bg-blue-800 transition"
+            target="_blank"
           >
             Baixar PDF
           </a>
@@ -33,6 +34,7 @@ const page = () => {
             href="https://ri.magazineluiza.com.br/Download/ITR-DFP?=TxidOAMhWp3Vd42Ed8uiyQ==&linguagem=pt"
             download
             className="self-start px-6 py-3 bg-blue-700 text-white rounded-lg hover:bg-blue-800 transition"
+            target="_blank"
           >
             Baixar PDF
           </a>
