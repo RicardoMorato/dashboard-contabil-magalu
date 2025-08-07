@@ -26,12 +26,6 @@ const financeIndicatorsData = [
     "2024": 0.71,
   },
   {
-    indicador: "Endividamento",
-    "2022": 2.54,
-    "2023": 2.90,
-    "2024": 2.30,
-  },
-  {
     indicador: "Giro do Ativo",
     "2022": 0.99,
     "2023": 0.98,
@@ -39,15 +33,27 @@ const financeIndicatorsData = [
   },
   {
     indicador: "Margem Líquida",
-    "2022": -1.3,
-    "2023": -2.7,
-    "2024": 1.2,
+    "2022": -1.34,
+    "2023": -2.66,
+    "2024": 1.18,
   },
   {
-    indicador: "Retorno Sobre Ativo",
-    "2022": -1.3,
-    "2023": -2.6,
-    "2024": 1.2,
+    indicador: "GAF",
+    "2022": 2.06,
+    "2023": 2.06,
+    "2024": 2.63,
+  },
+  {
+    indicador: "GAO",
+    "2022": 0.78,
+    "2023": 0.74,
+    "2024": 0.70,
+  },
+  {
+    indicador: "GAT",
+    "2022": 1.60,
+    "2023": 1.52,
+    "2024": 1.84,
   },
 ];
 
