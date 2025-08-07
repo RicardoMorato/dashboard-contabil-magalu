@@ -11,23 +11,27 @@ type FinanceData = {
   ativoTotal: string;
   patrimonioLiquido: string;
 
-  liquidezCorrente: number;
-  liquidezSeca: number;
-  endividamento: number;
-  giroDoAtivo: number;
-  margemLiquida: number;
-  retornoSobreAtivo: number;
+  LiquidezCorrente: number;
+  LiquidezSeca: number;
+  EndividamentoGeral: string;
+  GiroAtivo: number;
+  MargemLiquida: string;
+  RentabilidadeAtivo: string;
 
-  liquidezGeral: number;
-  participacaoCapitaisTerceiros: number;
-  rspl: number;
-  pmre: number;
-  pmrv: number;
-  pmpc: number;
-  cicloOperacional: number;
-  cicloFinanceiro: number;
-  imPL: number;
-  irnc: number;
+  LiquidezGeral: number;
+  ParticipacaoCapitaisTerceiros: string;
+  GrauImobilizacaoPL: string;
+  GrauImobilizacaoRNC: string;
+  RentabilidadePL: string;
+  PMRE: string;
+  PMRV: string;
+  PMPC: string;
+  CicloFinanceiro: string;
+  ComposicaoEndividamento: string;
+  LiquidezImediata: number;
+  MultiplicadorAlavancagemFinanceira: number;
+  ROIDuPont: string;
+  AlavancagemFinanceira: number;
 };
 
 interface FinanceStatCardsProps {
@@ -36,34 +40,47 @@ interface FinanceStatCardsProps {
 
 const FinanceStatCards: React.FC<FinanceStatCardsProps> = ({ data }) => {
   const indicatorsData = [
-    { name: "Liquidez Corrente", valor: data.liquidezCorrente },
-    { name: "Liquidez Seca", valor: data.liquidezSeca },
-    { name: "Endividamento", valor: data.endividamento },
-    { name: "Giro do Ativo", valor: data.giroDoAtivo },
-    { name: "Margem Líquida", valor: data.margemLiquida },
-    { name: "Retorno s/ Ativo", valor: data.retornoSobreAtivo },
+    { name: "Liquidez Corrente", valor: data.LiquidezCorrente },
+    { name: "Liquidez Seca", valor: data.LiquidezSeca },
+    { name: "Endividamento Geral", valor: data.EndividamentoGeral },
+    { name: "Giro do Ativo", valor: data.GiroAtivo },
+    { name: "Margem Líquida", valor: data.MargemLiquida },
+    { name: "Retorno s/ Ativo", valor: data.RentabilidadeAtivo },
   ];
 
   const othersIndicator = [
-    { name: "Liquidez Geral", valor: data.liquidezGeral },
+    { name: "Liquidez Geral", valor: data.LiquidezGeral },
+    { name: "Liquidez Imediata", valor: data.LiquidezImediata },
     {
       name: "Participação de Capitais de Terceiros",
-      valor: data.participacaoCapitaisTerceiros,
+      valor: data.ParticipacaoCapitaisTerceiros,
     },
     {
-      name: "Grau de Imobilização do Patrimônio Líquido (ImPL)",
-      valor: data.imPL,
+      name: "Grau de Imobilização do Patrimônio Líquido",
+      valor: data.GrauImobilizacaoPL,
     },
     {
-      name: "Grau de Imobilização dos Recursos Não Correntes (IRNC)",
-      valor: data.irnc,
+      name: "Grau de Imobilização dos Recursos Não Correntes",
+      valor: data.GrauImobilizacaoRNC,
     },
-    { name: "Retorno s/ Patrimônio Líquido (RSPL) ", valor: data.rspl },
-    { name: "Prazo Médio Renovação Estoques (PMRE)", valor: data.pmre },
-    { name: "Prazo Médio Recebimento Vendas (PMRV)", valor: data.pmrv },
-    { name: "Prazo Médio Pagamento Contas (PMPC)", valor: data.pmpc },
-    { name: "Ciclo Operacional", valor: data.cicloOperacional },
-    { name: "Ciclo Financeiro", valor: data.cicloFinanceiro },
+    {
+      name: "Retorno s/ Patrimônio Líquido (RSPL)",
+      valor: data.RentabilidadePL,
+    },
+    {
+      name: "Composição do Endividamento",
+      valor: data.ComposicaoEndividamento,
+    },
+    {
+      name: "Multiplicador da Alavancagem Financeira",
+      valor: data.MultiplicadorAlavancagemFinanceira,
+    },
+    { name: "Alavancagem Financeira", valor: data.AlavancagemFinanceira },
+    { name: "ROI DuPont", valor: data.ROIDuPont },
+    { name: "Prazo Médio Renovação Estoques (PMRE)", valor: data.PMRE },
+    { name: "Prazo Médio Recebimento Vendas (PMRV)", valor: data.PMRV },
+    { name: "Prazo Médio Pagamento Contas (PMPC)", valor: data.PMPC },
+    { name: "Ciclo Financeiro", valor: data.CicloFinanceiro },
     { name: "Ano", valor: data.ano },
   ];
 
