@@ -96,13 +96,10 @@ const OtherFinanceIndicatorsTable: React.FC<
     }
 
     if (lowerName === "composição do endividamento") {
-      return numericValue <= 85 ? "text-green-600" : "text-red-600";
+      return numericValue <= 50 ? "text-red-600" : "text-green-600";
     }
 
-    if (
-      lowerName === "multiplicador da alavancagem financeira" ||
-      lowerName === "alavancagem financeira"
-    ) {
+    if (lowerName === "multiplicador da alavancagem financeira") {
       return numericValue <= 3 ? "text-green-600" : "text-red-600";
     }
 

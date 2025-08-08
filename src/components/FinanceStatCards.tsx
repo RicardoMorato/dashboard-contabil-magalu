@@ -64,7 +64,7 @@ const FinanceStatCards: React.FC<FinanceStatCardsProps> = ({ data }) => {
       "Lucro Líquido / PL médio × 100",
     "Multiplicador de Alavancagem Financeira (MAF)": "AT médio / PL médio",
     "Análise do ROI (DuPont)": "GA × ML",
-    "Dívida Bruta / Patrimônio":"dívida bruta total / patrimônio líquido",
+    "Dívida Bruta / Patrimônio": "dívida bruta total / patrimônio líquido",
     "Lucro por Ação": "lucro líquido / número de ações em circulação",
 
     "Alavancagem Financeira (GAF)": "ROE / ROA",
@@ -177,10 +177,6 @@ const FinanceStatCards: React.FC<FinanceStatCardsProps> = ({ data }) => {
               {
                 name: "Multiplicador da Alavancagem Financeira",
                 valor: data.MultiplicadorAlavancagemFinanceira,
-              },
-              {
-                name: "Alavancagem Financeira",
-                valor: data.AlavancagemFinanceira,
               },
               { name: "ROI DuPont", valor: data.ROIDuPont },
               {
