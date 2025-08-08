@@ -39,9 +39,9 @@ const financeIndicatorsData = [
   },
   {
     indicador: "GAF",
-    "2022": 2.06,
-    "2023": 2.06,
-    "2024": 2.63,
+    "2022": 3.55,
+    "2023": 3.90,
+    "2024": 3.30,
   },
   {
     indicador: "GAO",
