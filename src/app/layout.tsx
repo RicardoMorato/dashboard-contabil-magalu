@@ -9,6 +9,12 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="pt-br">
+      <head>
+        <meta charSet="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" type="image/x-icon" href="/logo-magalu.jpg" />
+        <title>Dashboard Contábil</title>
+      </head>
       <body className="min-h-screen bg-gray-100">
         <SidebarProvider>
           <Header />
