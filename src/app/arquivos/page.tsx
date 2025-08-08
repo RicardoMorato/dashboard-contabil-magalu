@@ -2,7 +2,7 @@ const page = () => {
   return (
     <div className="min-h-screen bg-gray-100 p-8 flex flex-col items-center">
       <h1 className="text-3xl font-bold text-blue-800 mb-10 text-center">
-        Baixe os relatórios contábeis da Magazine Luiza
+        Visualize e baixe os relatórios contábeis da Magazine Luiza
       </h1>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-5xl">
@@ -19,7 +19,7 @@ const page = () => {
             className="self-start px-6 py-3 bg-blue-700 text-white rounded-lg hover:bg-blue-800 transition"
             target="_blank"
           >
-            Baixar PDF
+            Visualizar Relatório
           </a>
         </div>
 
@@ -36,7 +36,7 @@ const page = () => {
             className="self-start px-6 py-3 bg-blue-700 text-white rounded-lg hover:bg-blue-800 transition"
             target="_blank"
           >
-            Baixar PDF
+            Visualizar Relatório
           </a>
         </div>
       </div>
