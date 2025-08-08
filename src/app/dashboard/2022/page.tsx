@@ -19,7 +19,7 @@ const data2022 = {
   MargemLiquida: "20,39%",
   RentabilidadeAtivo: "16,04%",
   RentabilidadePL: "37,04%",
-  MultiplicadorAlavancagemFinanceira: 2.06,
+  MultiplicadorAlavancagemFinanceira: 3.55,
   ROIDuPont: "16,04%",
   AlavancagemFinanceira: 2.06,
   PMRE: "89 dias",

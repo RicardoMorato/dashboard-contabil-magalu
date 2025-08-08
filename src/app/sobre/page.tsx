@@ -23,7 +23,7 @@ const page = () => {
             <h2 className="text-xl font-semibold mb-1">O que o projeto faz</h2>
             <ul className="list-disc list-inside text-gray-700">
               <li>
-                Centraliza os dados contábeis da empresa em um único dashboard.
+                Centraliza os dados contábeis da empresa por ano em um único dashboard.
               </li>
               <li>
                 Facilita a visualização de informações financeiras ao longo dos
@@ -34,7 +34,7 @@ const page = () => {
                 evolução e estrutura.
               </li>
               <li>
-                Gera indicadores de liquidez, rentabilidade e endividamento.
+                Gera indicadores de liquidez, rentabilidade, endividamento e atividade.
               </li>
             </ul>
           </div>

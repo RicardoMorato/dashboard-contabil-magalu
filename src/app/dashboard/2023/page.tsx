@@ -19,7 +19,7 @@ const data2023 = {
   MargemLiquida: "18,67%",
   RentabilidadeAtivo: "14,00%",
   RentabilidadePL: "28,84%",
-  MultiplicadorAlavancagemFinanceira: 2.06,
+  MultiplicadorAlavancagemFinanceira: 3.90,
   ROIDuPont: "14,00%",
   AlavancagemFinanceira: 2.06,
   PMRE: "93 dias",

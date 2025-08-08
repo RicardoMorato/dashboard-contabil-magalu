@@ -7,10 +7,9 @@ interface OtherFinanceIndicatorsTableProps {
   data: { name: string; valor: number | string }[];
 }
 
-const OtherFinanceIndicatorsTable: React.FC<OtherFinanceIndicatorsTableProps> = ({
-  title = "Outros Indicadores Financeiros",
-  data,
-}) => {
+const OtherFinanceIndicatorsTable: React.FC<
+  OtherFinanceIndicatorsTableProps
+> = ({ title = "Outros Indicadores Financeiros", data }) => {
   const [filtroCategoria, setFiltroCategoria] = useState("Todos");
 
   const categoriasMapeadas: Record<string, string> = {
@@ -22,18 +21,17 @@ const OtherFinanceIndicatorsTable: React.FC<OtherFinanceIndicatorsTableProps> = 
     "participação de capitais de terceiros": "Endividamento",
     "composição do endividamento": "Endividamento",
     "multiplicador da alavancagem financeira": "Endividamento",
-    "alavancagem financeira": "Endividamento",
     "retorno s/ patrimônio líquido (rspl)": "Rentabilidade",
-    "rentabilidadepl": "Rentabilidade",
+    rentabilidadepl: "Rentabilidade",
     "roi dupont": "Rentabilidade",
     "grau de imobilização do ativo": "Rentabilidade",
     "grau de imobilização do patrimônio líquido": "Rentabilidade",
     "prazo médio renovação estoques (pmre)": "Atividade",
-    "pmre": "Atividade",
+    pmre: "Atividade",
     "prazo médio recebimento vendas (pmrv)": "Atividade",
-    "pmrv": "Atividade",
+    pmrv: "Atividade",
     "prazo médio pagamento contas (pmpc)": "Atividade",
-    "pmpc": "Atividade",
+    pmpc: "Atividade",
     "ciclo operacional": "Atividade",
     "ciclo financeiro": "Atividade",
   };
@@ -46,9 +44,7 @@ const OtherFinanceIndicatorsTable: React.FC<OtherFinanceIndicatorsTableProps> = 
     "Atividade",
   ];
 
-  const anoItem = data.find(
-    (item) => item.name.trim().toLowerCase() === "ano"
-  );
+  const anoItem = data.find((item) => item.name.trim().toLowerCase() === "ano");
   const ano = anoItem ? anoItem.valor : "";
 
   const dataSemAno = data.filter(
@@ -154,7 +150,7 @@ const OtherFinanceIndicatorsTable: React.FC<OtherFinanceIndicatorsTableProps> = 
       return numericValue <= 50 ? "text-green-600" : "text-red-600";
     }
 
-    return "text-gray-800"; // cor neutra
+    return "text-gray-800";
   };
 
   return (

@@ -291,6 +291,51 @@ const page = () => {
             menor, melhor para o fluxo de caixa.
           </p>
         </div>
+
+        <div className="bg-white rounded-lg shadow p-3 flex flex-col">
+          <div className="flex items-center mb-1">
+            <Scale className="text-blue-700 mr-1" size={24} />
+            <h2 className="text-lg font-semibold">Dívida Bruta / Patrimônio</h2>
+          </div>
+          <p className="text-gray-700 text-base leading-tight">
+            Relação entre a dívida total da empresa e seu patrimônio líquido.
+            Mostra o nível de alavancagem financeira. Quanto menor, menor o
+            risco.
+          </p>
+        </div>
+
+        <div className="bg-white rounded-lg shadow p-3 flex flex-col">
+          <div className="flex items-center mb-1">
+            <DollarSign className="text-blue-700 mr-1" size={24} />
+            <h2 className="text-lg font-semibold">LPA (Lucro por Ação)</h2>
+          </div>
+          <p className="text-gray-700 text-base leading-tight">
+            Mede o lucro líquido dividido pelo número total de ações emitidas.
+            Mostra quanto de lucro cabe a cada ação.
+          </p>
+        </div>
+
+        <div className="bg-white rounded-lg shadow p-3 flex flex-col">
+          <div className="flex items-center mb-1">
+            <Percent className="text-blue-700 mr-1" size={24} />
+            <h2 className="text-lg font-semibold">Margem Bruta</h2>
+          </div>
+          <p className="text-gray-700 text-base leading-tight">
+            Percentual da receita que sobra após deduzir apenas os custos
+            diretos de produção ou compra de mercadorias.
+          </p>
+        </div>
+
+        <div className="bg-white rounded-lg shadow p-3 flex flex-col">
+          <div className="flex items-center mb-1">
+            <BarChart3 className="text-blue-700 mr-1" size={24} />
+            <h2 className="text-lg font-semibold">Preço sobre o Lucro (P/L)</h2>
+          </div>
+          <p className="text-gray-700 text-base leading-tight">
+            Relação entre o preço atual da ação e o lucro por ação. Indica
+            quanto o mercado está disposto a pagar pelo lucro da empresa.
+          </p>
+        </div>
       </div>
     </div>
   );

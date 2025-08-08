@@ -20,7 +20,7 @@ const data2024 = {
   MargemLiquida: "17,50%",
   RentabilidadeAtivo: "12,60%",
   RentabilidadePL: "33,08%",
-  MultiplicadorAlavancagemFinanceira: 2.63,
+  MultiplicadorAlavancagemFinanceira: 3.29,
   ROIDuPont: "12,60%",
   AlavancagemFinanceira: 2.63,
   PMRE: "91 dias",
