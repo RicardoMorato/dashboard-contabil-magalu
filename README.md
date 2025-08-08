@@ -43,19 +43,23 @@ Após a extração e tratamento, os dados foram organizados em planilhas e trans
 ```bash
 git clone https://github.com/WeldonPereira/dashboard-contabil-magalu.git
 ```
-2. Instale as dependências:
+2. Acesse a pasta do projeto:
+```bash
+cd dashboard-contabil-magalu
+```
+3. Instale as dependências:
 ```bash
 npm install
 # ou
 yarn install
 ```
-3. Inicie o ambiente de desenvolvimento:
+4. Inicie o ambiente de desenvolvimento:
 ```bash
 npm run dev
 # ou
 yarn dev
 ```
-4. Acesse o dashboard pelo navegador em: http://localhost:3000
+5. Acesse o dashboard pelo navegador em: http://localhost:3000
 
 ## Colaboradores
 
