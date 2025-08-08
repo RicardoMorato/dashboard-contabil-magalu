@@ -64,6 +64,8 @@ const FinanceStatCards: React.FC<FinanceStatCardsProps> = ({ data }) => {
       "Lucro Líquido / PL médio × 100",
     "Multiplicador de Alavancagem Financeira (MAF)": "AT médio / PL médio",
     "Análise do ROI (DuPont)": "GA × ML",
+    "Dívida Bruta / Patrimônio":"dívida bruta total / patrimônio líquido",
+    "Lucro por Ação": "lucro líquido / número de ações em circulação",
 
     "Alavancagem Financeira (GAF)": "ROE / ROA",
     "Alavancagem Operacional (GAO)": "ΔLOp / ΔVAt",
@@ -85,12 +87,11 @@ const FinanceStatCards: React.FC<FinanceStatCardsProps> = ({ data }) => {
   return (
     <div className="flex-1 bg-gray-100 relative z-10">
       <main className="max-w-7xl mx-auto p-8">
-        <div className="flex items-center justify-between mb-2 bg-white p-4 rounded mb-8">
+        <div className="flex items-center justify-between bg-white p-4 rounded mb-8">
           <h1 className="text-base font-bold text-blue-700 flex items-center gap-2">
             Dashboard {data.ano}
           </h1>
 
-          {/* Dropdown com indicadores */}
           <div className="flex items-center gap-2">
             <select
               className="border rounded px-2 py-1"
@@ -109,7 +110,6 @@ const FinanceStatCards: React.FC<FinanceStatCardsProps> = ({ data }) => {
           </div>
         </div>
 
-        {/* Card da fórmula */}
         {selectedIndicator && (
           <div className="bg-white p-4 rounded shadow-md border mb-4">
             <h2 className="font-semibold">{selectedIndicator}</h2>
